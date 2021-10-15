@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="zipperMainDAO">
+
+	<typeAlias alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap" />
+	<typeAlias alias="zipperVO" type="egovframework.zipper.web.service.EgovZipperWebMainVO" />
+	<typeAlias alias="pageNM" type="egovframework.zipper.web.service.EgovPageVO" />
+	
+	<select id="zipperMainDAO.LoginInfo" resultClass="zipperVO">
+		SELECT 
+			ORG_ID2 as orgId2,
+			ORG_PW2 as orgPw2,
+			ORG_IDX2 as orgIdx2,
+			ORG_Name2 as orgName2,
+			status as status
+			FROM tt_test_login
+		WHERE ORG_ID2 = #orgId2#
+	</select>
+	
+	<select id="zipperMainDAO.adminInfo" resultClass="zipperVO">
+		SELECT 
+			admin_idx as adminIdx,
+			ORG_ID as orgId,
+			ORG_PW as orgPw
+			FROM tt_lyh_admin
+		WHERE ORG_ID = #orgId2#
+	</select>
+	
+	<select id="zipperMainDAO.userInfo" resultClass="egovMap">
+		select *
+		from tt_test_login
+	</select>
+	
+	<insert id="zipperDAO.insertInfo">
+		insert into tt_lyh_table
+		(board_name, board_email,board_number,board_content,board_fn,date,usr_file,srv_file,board_org_idx) values
+		(#boardName#,#boardEmail#,#boardNumber#,#boardContent#,#boardFn#,getdate(),#usrFile#,#srvFile#,#boardOrgIdx#)
+	</insert>
+	
+	<select id="zipperMainDAO.list" resultClass="egovMap">
+	 select
+	 TOP $recordCountPerPage$
+	 *
+	 from tt_lyh_table
+	 where
+	 board_idx not in(
+	 select TOP $firstIndex$
+	 board_idx from tt_lyh_table
+	 order by board_idx desc
+	 )
+	 order by board_idx desc
+	</select>
+	
+	<select id="zipperMainDAO.listCnt" resultClass="String">
+	select count(*)
+	 from tt_lyh_table
+	</select>
+	
+	<select id="zipperMainDAO.selectOne" resultClass="egovMap">
+	select * 
+	from tt_lyh_table
+	where board_idx=#boardIdx#
+	</select>
+	
+	
+	<delete id="zipperDAO.Delete">
+		DELETE FROM tt_lyh_table WHERE board_idx = #boardIdx#
+	</delete>
+
+	<update id="zipperDAO.Update">
+		UPDATE tt_lyh_table SET
+		board_name = #boardName#,
+		board_email = #boardEmail#,
+		board_number = #boardNumber#,
+		board_content =  #boardContent#,
+		board_fn = #boardFn#,
+		usr_file = #usrFile#,
+		srv_file = #srvFile#
+		WHERE
+		board_idx = #boardIdx#
+	</update>
+	
+	<select id="zipperDAO.chkDupOrgId" resultClass="java.lang.Integer">
+		/*companyDAO.chkDupOrgId*/
+		SELECT COUNT(*)
+		FROM tt_test_login
+		WHERE
+		ORG_ID2 = #orgId2#
+	</select>
+	
+	
+		<insert id="zipperDAO.myCompanyInfoInsert">
+		INSERT INTO tt_TEST_LOGIN (
+		ORG_ID2,
+		ORG_PW2,
+		USE_YN2,
+		ORG_NAME2,
+		ORG_PHONE2,
+		ORG_EMAIL2,
+		REG_DATE2
+		) 
+		VALUES (
+		#orgId2#,
+		#orgPw2#,
+		#useYn#,
+		#orgName2#,
+		#orgPhone2#,
+		#orgEmail2#,
+		GETDATE()
+		)
+		<selectKey keyProperty="orgIdx2" resultClass="String">
+			SELECT
+			@@IDENTITY
+		</selectKey>
+	</insert>
+	
+	<update id="zipperDAO.statusUpdate">
+		UPDATE tt_test_login SET
+		status = #status#
+	</update>
+
+	<update id="zipperDAO.statusUpdate2">
+		UPDATE tt_test_login SET
+		status = #status#
+		where 
+		org_idx2 = #boardOrgIdx#
+	</update>
+	
+	<update id="zipperDAO.boardStatusUpdate">
+		UPDATE tt_lyh_table SET
+		user_status = #status#
+	</update>
+
+	<update id="zipperDAO.boardStatusUpdate2">
+		UPDATE tt_lyh_table SET
+		user_status = #status#
+		where 
+		board_org_idx = #boardOrgIdx#
+	</update>
+	
+		<select id="zipperDAO.selectFileList" parameterClass="zipperVO" resultClass="zipperVO">
+		SELECT
+			FIL_IDX	AS filIdx,
+		 	IDX AS idx,
+		 	FIL_PATH AS filPath,
+		 	FIL_USR_NAME AS filUsrName,
+		 	FIL_SVR_NAME AS filSvrName,
+		 	FIL_SIZE AS filSize
+		 FROM
+		 	tt_lyh_file AI
+		 WHERE
+			1=1 and
+			IDX = #idx# 
+		 AND
+			FIL_PATH = #filPath#
+		ORDER BY
+			FIL_IDX asc
+	</select>
+	
+	<select id="zipperDAO.fileSelectById" parameterClass="fileVO" resultClass="zipperVO">
+		<![CDATA[
+		SELECT
+			FIL_IDX as filIdx, 
+			FIL_PATH as filPath,
+		 	FIL_USR_NAME AS filUsrName,
+		    FIL_SVR_NAME as filSvrName
+		FROM tt_lyh_file
+		WHERE FIL_IDX = #filIdx#
+		]]>
+	</select>
+	
+	<select id="zipperDAO.fileSelectByIdPath" parameterClass="fileVO" resultClass="zipperVO">
+		<![CDATA[
+		SELECT
+			FIL_IDX as filIdx, 
+			FIL_PATH as filPath,
+			FIL_USR_NAME AS filUsrName,
+		    FIL_SVR_NAME as filSvrName
+		FROM tt_lyh_file
+		WHERE IDX = #idx#
+		AND
+			FIL_PATH = #filPath#
+		]]>
+	</select>
+	
+	<select id="zipperDAO.selectFileDelList" parameterClass="fileVO" resultClass="zipperVO">
+		SELECT
+			FIL_IDX	AS filIdx,
+		 	IDX AS idx,
+		 	FIL_PATH AS filPath,
+		 	FIL_USR_NAME AS filUsrName,
+		 	FIL_SVR_NAME AS filSvrName,
+		 	FIL_SIZE AS filSize
+		 FROM
+		 	tt_lyh_file AI
+		 WHERE
+			1=1 and
+			IDX = #idx# AND
+			FIL_PATH = #filPath#
+			
+		ORDER BY
+			FIL_IDX asc
+	</select>
+
+	<insert id="zipperDAO.fileInsert">
+		<![CDATA[
+		INSERT INTO tt_lyh_file (
+			IDX,
+			FIL_PATH,
+			FIL_USR_NAME,
+			FIL_SVR_NAME,
+			FIL_SIZE,
+			REG_ADM_YN,
+		    REG_IDX,
+		    REG_NAME,
+		    REG_IP,
+		    REG_DATE
+		)
+		VALUES (
+			#idx# 
+			,	#filPath# 
+			,	#filUsrName# 
+			,	#filSvrName#
+			,	#filSize# 
+			,	#regAdmYn#
+		    ,	#regIdx#
+			,   #regName#
+			,   #regIp#
+		    ,	getdate()
+		)
+		]]>
+	</insert>
+	
+	<update id="zipperDAO.fileUpdate">
+		UPDATE tt_lyh_file SET
+			FIL_USR_NAME 	= #filUsrName#
+			,FIL_SVR_NAME 	= #filSvrName#
+			,FIL_SIZE 		= #filSize#
+			,MOD_ADM_YN		= #modAdmYn#
+		    ,MOD_IDX 		= #modIdx#
+			,MOD_NAME		= #modName#
+			,MOD_IP  		= #modIp#
+			,MOD_DATE 		= getdate()
+		WHERE
+			FIL_IDX = #filIdx#
+	</update>
+	
+	<delete id="zipperDAO.fileDelete">
+		<![CDATA[
+		DELETE FROM tt_lyh_file WHERE FIL_IDX = #filIdx#
+		]]>
+	</delete>
+	
+	<delete id="zipperDAO.fileDeleteAll">
+		<![CDATA[
+		DELETE FROM tt_lyh_file WHERE IDX = #idx# AND FIL_PATH = #filPath#
+		]]>
+	</delete>
+</sqlMap>

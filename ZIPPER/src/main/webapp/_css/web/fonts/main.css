@@ -1,0 +1,72 @@
+@charset "utf-8";
+/*color
+blue #3e74d6
+pink #fb8181
+red  #e84444
+*/
+a		{text-decoration:none;}
+li		{list-style: none;}
+body	{margin:0; padding:0;}
+
+
+div.visual_wrap							{position:relative; width:100%; height:470px; background:#3e74d6 url('../_img/cont/visual_01.jpg') no-repeat 50% 50%; }
+div.visual_wrap div.visual				{width:1200px; margin:0 auto; }
+div.visual_wrap div.visual p.vs_txt						{color:#fff; margin:0; padding-top:28px;}
+div.visual_wrap div.visual p.vs_txt:first-child			{padding-top:65px; color:#d4e0f5; font:400 20px/25px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+div.visual_wrap div.visual p.vs_txt:nth-child(2) 		{position:relative; display:inline-block; z-index:1;}
+div.visual_wrap div.visual p.vs_txt:nth-child(2):after	{position:absolute; content:''; display:block; top:10px; right:-30px; background:#2350a4; width:60px; height:60px; border-radius:60px; z-index:-1}
+div.visual_wrap div.visual p.vs_txt:nth-child(3)		{padding-top:25px; color:#d4e0f5; font:300 18px/30px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+
+div.visual_wrap div.slick								{width:1200px; margin:0 auto; margin-top:40px; overflow:hidden;}
+div.visual_wrap div.slick > a							{display:inline-block; width:12px; height:20px;}
+div.visual_wrap div.slick > a.prev						{background:url('../_img/cont/slick_prev.png') no-repeat 0% 50%;}
+div.visual_wrap div.slick > a.next						{background:url('../_img/cont/slick_next.png') no-repeat 100% 50%;}
+div.visual_wrap div.slick ul							{display:inline-block}
+div.visual_wrap div.slick ul li							{float:left;}
+div.visual_wrap div.slick ul li a						{display:inline-block; width:20px; height:20px; background:url('../_img/cont/slick_off.png') no-repeat 50% 50%; }
+div.visual_wrap div.slick ul li a.on					{background:url('../_img/cont/slick_on.png') no-repeat 50% 50%; }
+
+
+div.visual_wrap ul.q_menu					{position:absolute; bottom:30px; left:50%; margin-left:-600px; padding:0; display:table; table-layout:fixed; box-shadow:0 0 6px 1px rgba(0,0,0,0.2); width:1200px; background:#fff;}
+div.visual_wrap ul.q_menu li				{display:table-cell; position:relative; height:100px; text-align:center; vertical-align:middle; box-sizing:border-box;}
+div.visual_wrap ul.q_menu li:after 			{position:absolute; content:''; display:block; top:26px; right:0; background:#ddd; width:1px; height:50px;}
+div.visual_wrap ul.q_menu li.my_data		{display:table-cell; height:100px; text-align:center; vertical-align:middle; box-sizing:border-box;}
+div.visual_wrap ul.q_menu li a						{display:block; width:100%; height:100%; padding:35px 50px 34px 0; box-sizing:border-box; color:#222; font:400 20px/30px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+div.visual_wrap ul.q_menu li:first-child a			{background:url('../_img/cont/q_m01.png') no-repeat 74% 50%; }
+div.visual_wrap ul.q_menu li:first-child a:hover	{color:#f98180; background:#fbf1f1 url('../_img/cont/q_m01.png') no-repeat 74% 50%; transition: all 0.2s;}
+div.visual_wrap ul.q_menu li:nth-child(2) a			{background:url('../_img/cont/q_m02.png') no-repeat 72% 50%; }
+div.visual_wrap ul.q_menu li:nth-child(2) a:hover	{color:#f98180; background:#fbf1f1 url('../_img/cont/q_m02.png') no-repeat 72% 50%; transition: all 0.2s;}
+div.visual_wrap ul.q_menu li:nth-child(3) a			{padding:35px 55px 34px 0; background:url('../_img/cont/q_m03.png') no-repeat 78% 50%; }
+div.visual_wrap ul.q_menu li:nth-child(3) a:hover	{color:#f98180; background:#fbf1f1 url('../_img/cont/q_m03.png') no-repeat 78% 50%; transition: all 0.2s;}
+div.visual_wrap ul.q_menu li:nth-child(4) a			{padding:35px 65px 34px 0; background:url('../_img/cont/q_m04.png') no-repeat 65% 50%; }
+div.visual_wrap ul.q_menu li:nth-child(4) a:hover	{color:#f98180; background:#fbf1f1 url('../_img/cont/q_m04.png') no-repeat 65% 50%; transition: all 0.2s;}
+div.visual_wrap ul.q_menu li:nth-child(5) a			{color:#fff; background:#3e74d6 url('../_img/cont/q_m05.png') no-repeat 76% 50%; }
+div.visual_wrap ul.q_menu li:nth-child(5) a:hover	{color:#fff; background:#1f4c9e url('../_img/cont/q_m05.png') no-repeat 76% 50%; transition: all 0.2s;}
+div.visual_wrap ul.q_menu li:nth-child(5):after 	{display:none;}
+
+div.board_wrap									{width:1200px; margin:0 auto; padding:65px 0 50px; overflow:hidden;}
+div.board_wrap > div							{width:50%; float:left; margin:0; padding:0;}
+div.board_wrap div div.board_top 				{overflow:hidden;}
+div.board_wrap div div.board_top h4 			{display:inline-block; position:relative; margin:0; padding-bottom:6px; color:#222; font:500 22px/30px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+div.board_wrap div div.board_top h4:after 		{position:absolute; content:''; display:block; bottom:0px; left:0; background:#2350a4; width:100%; height:2px;}
+div.board_wrap div div.board_top a				{float:right; display:inline-block; border:1px solid #ddd;padding:5px;}
+div.board_wrap div div.board_top a:hover		{background:#eee;}
+div.board_wrap div.notice 						{width:calc(50% - 80px); margin-right:80px;}
+div.board_wrap div.notice ul 					{margin-top:20px; padding:0;}
+div.board_wrap div.notice ul li  				{position:relative; overflow:hidden; padding:8px 0 8px 10px; }
+div.board_wrap div.notice ul li:after			{position:absolute; content:''; display:block; top:50%; left:0px; background:#6384bf; width:4px; height:4px; border-radius:20px;}
+div.board_wrap div.notice ul li a 				{display:inline-block; vertical-align:middle; max-width:74%; color:#333; font:300 16px/21px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif; text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; white-space: nowrap; word-wrap: normal !important;}
+div.board_wrap div.notice ul li a:hover 		{text-decoration:underline;}
+div.board_wrap div.notice ul li span.new 		{display:inline-block; vertical-align:middle; margin-left:5px; padding:2px 4px; background:#f98180; font:300 12px/15px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial;color: #fff;}
+div.board_wrap div.notice ul li span.date 		{float:right; color:#999; font:300 16px/21px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif}
+
+div.board_wrap div.faq ul 						{overflow:hidden; margin-top:30px; padding:0; }
+div.board_wrap div.faq ul li 					{float:left; width:49%; min-height:178px; border:1px solid #ddd; padding:20px; box-sizing:border-box;}
+div.board_wrap div.faq ul li:first-child 		{margin-right:2%;}
+
+div.board_wrap div.faq ul li p 					{position: relative; margin:0; padding-left:40px; height:90px;}
+div.board_wrap div.faq ul li p:after 			{position:absolute; content:''; display:block; top:0%; left:0px; background:#333 url('../_img/cont/Q_w.png') no-repeat 78% 78%; width:27px; height:27px; border-radius:30px;}
+div.board_wrap div.faq ul li p a 				{overflow:hidden; margin-bottom:30px; color:#333; height:78px; font:300 16px/26px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; word-wrap:break-word; box-sizing:border-box;}
+div.board_wrap div.faq ul li p a:hover 			{text-decoration:underline;}
+div.board_wrap div.faq ul li a.faq_more 		{display:block; margin-top:5px; background:#fb8181 url('../_img/cont/more_plus.png') no-repeat 59% 50%; padding-right:30px; height:40px; text-align:center; color:#fff; font:300 15px/40px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+div.board_wrap div.faq ul li a.faq_more:hover	{background:#ef6464 url('../_img/cont/more_plus.png') no-repeat 59% 50%; transition:all 0.3s;}

@@ -1,0 +1,209 @@
+@charset "utf-8";
+/*color
+blue #3e6cc0 - hover #1f4c9e
+pink #fb8181 - hover #ef4f4f
+text red  #e84444
+*/
+
+/*** 폰트 ***/
+.f_0		{font-size:0px !important; display:none;}
+.font_0		{font-size:0px !important;}
+.f_in		{text-indent:-999999px; display:inline-block}
+.t_red			{color:#e45555 !important;}
+.t_blue			{color:#2350a4 !important;}
+.note			{display:inline-block; padding-top:5px; color:#555; font:300 14px/19px "Noto Sans KR","malgun gothic","Dotum"," Gulim","Arial","verdana","Helvetica",sans-serif;}
+.note_r			{color:#e84444; font:300 14px/19px "Noto Sans KR","malgun gothic","Dotum"," Gulim","Arial","verdana","Helvetica",sans-serif;}
+.note span		{border-bottom:1px solid #e84444;}
+.star			{display:inline-block; margin-left:2px; color:#e84444 !important;}
+.v_middle		{display:inline-block; margin:0; padding:5px 0 0 0;}
+
+h2					{display:inline-block; position:relative; letter-spacing:-0.5px; padding:5px 15px 0 0; color:#111; font:700 30px/35px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif; z-index:1;}
+h2 span				{font:500 30px/35px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+h2:after            {content:""; display:block; background:#497ad0; width:28px; height:28px; border-radius:28px; position:absolute; right:0; top:0; z-index:-1;}
+h3					{color:#111; font:600 22px/30px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+h3.name /* 기관명 */	{margin-bottom:15px; padding-left:26px; background:url('/_img/web/cont/h3_name.png')no-repeat 0 50%;}
+h4					{display:inline-block; margin:35px 0 5px 0; color:#333; font:600 20px/30px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+h4 span				{font:500 22px/30px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+h3 + h4				{margin-top:0;}
+
+/*** 버튼 ***/
+/*p.pn + p.btn_area		{margin-top:10px; text-align:center;}*/
+p.btn_area				{margin-top:20px; overflow:hidden; text-align:right; box-sizing:border-box;}
+p.btn_area.c			{text-align:center;}
+p.btn_area .l			{float:left;}
+p.btn_area a			{display:inline-block; height:50px; box-sizing:border-box;}
+p.btn_tarea			{text-align:right;}
+
+/*라인블루*/
+a.btn_line			{min-width:120px; text-align:center; background:#fff; border:1px solid #3f68b1; padding:14px 20px 15px; color:#2350a4; font:400 15px/20px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif; transition:all 0.3s;}
+a.btn_line:hover	{background:#eef4ff;}
+/*블루*/
+a.btn_submit		{min-width:120px; text-align:center; background:#3f68b1; padding:14px 20px 15px; color:#fff; font:400 15px/20px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+a.btn_submit:hover	{background:#1f4c9e; transition: all 500ms;}
+/*레드*/
+a.btn_del			{min-width:120px; text-align:center; background:#e45555; padding:14px 20px 15px; font-size:15px; font-weight:400; line-height:20px; color:#fff;}
+a.btn_del:hover		{background:#da3030; transition: all 500ms;}
+/*그레이*/
+a.btn_list			{min-width:120px; text-align:center; background:#888; padding:14px 20px 15px; font-size:15px; font-weight:400; line-height:20px; color:#fff;}
+a.btn_list:hover	{background:#555; transition: all 500ms;}
+/*블랙*/
+a.btn_etc			{min-width:120px; text-align:center; background:#333; padding:14px 20px 15px; font-size:15px; font-weight:400; line-height:20px; color:#fff;}
+a.btn_etc:hover		{background:#555; transition: all 500ms;}
+/*그린*/
+a.btn_excel			{min-width:120px; text-align:center; background:#50896a; padding:14px 20px 15px; font-size:15px; font-weight:400; line-height:20px; color:#fff;}
+a.btn_excel:hover	{background:#367754; transition: all 500ms;}
+
+/*라인다운로드*/
+a.btn_list_down			{display:inline-block;text-align:center; background:#fff url('/_img/web/cont/down_.png')no-repeat 90% 50% / 16px; padding:10px 35px 10px 15px; color:#3e6cc1; border: 1px solid #3e6cc1; font:400 15px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+a.btn_list_down:hover	{background:#3e6cc1 url('/_img/web/cont/down_w.png')no-repeat 90% 50% / 16px; transition: all  500ms; font:400 15px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;color:#fff }
+
+/*스몰버튼*/
+a.sm_blue			{display:inline-block; box-sizing:border-box;  background:#3f68b1; padding:10px 13px 11px; border-radius:3px; text-align:center;  color:#fff !important; font:300 14px/14px "Noto Sans KR", "malgun gothic","Dotum"," Gulim","Arial","Helvetica",sans-serif !important;}
+a.sm_blue:hover		{text-decoration:none !important;}
+a.sm_red			{display:inline-block; box-sizing:border-box;  background:#e45555; padding:10px 13px 11px; border-radius:3px; text-align:center;  color:#fff !important; font:300 14px/14px "Noto Sans KR", "malgun gothic","Dotum"," Gulim","Arial","Helvetica",sans-serif !important;}
+a.sm_red:hover		{text-decoration:none !important;}
+a.sm_line			{display:inline-block; box-sizing:border-box; background:#fff; border:1px solid #3f68b1; padding:9px 13px 10px;  border-radius: 3px; -webkit-border-radius:3px; -moz-border-radius:3px; text-align:center; color:#2350a4; font:300 14px/14px "Noto Sans KR", "malgun gothic","Dotum"," Gulim","Arial","Helvetica",sans-serif !important; transition:all 0.3s;}
+a.sm_line:hover		{text-decoration:none !important; background:#eef4ff;}
+a.sm_plus			{display:inline-block; box-sizing:border-box;  background:#3f68b1 url('/_img/web/cont/btn_plus.png')no-repeat right 14px top 13px; padding:10px 28px 11px 13px; border-radius:3px; text-align:center; color:#fff !important; font:300 14px/14px "Noto Sans KR", "malgun gothic","Dotum"," Gulim","Arial","Helvetica",sans-serif !important; transition:all 0.3s;}
+a.sm_plus:hover		{text-decoration:none !important; background:#1f4c9e url('/_img/web/cont/btn_plus.png')no-repeat right 14px top 13px;; transition: all 500ms;}
+
+/*개발팀 성혁제 200306*/
+/*라지삭제*/	a.lg_del			{padding:5px 5px 5px 5px; margin-left:1%; display:inline-block; cursor:pointer; margin-top:1px; width:15px; height:15px; border:1px solid #3e6cc0; background:#fff url('/_img/adm/cont/sm_del.png')no-repeat 49% 49%; border-radius:3px;}
+/*라지삭제*/	a.lg_del:hover		{text-decoration:none !important;}
+/* ------------------ */
+
+button.sm_del		{display:inline-block; box-sizing:border-box; cursor:pointer; margin-top:1px; width:18px; height:18px; border:1px solid #e45555; background:#fff url('/_img/web/cont/sm_del00.png')no-repeat 50% 50%; border-radius:3px;}
+
+/* 글쓰기 페이지 파일버튼 */
+a.file_up			{display:inline-block; height:40px; box-sizing:border-box; background:#fff; border:1px solid #3f68b1; padding:9px 13px 10px; border-radius: 3px; -webkit-border-radius:3px; -moz-border-radius:3px; text-align:center; color:#2350a4; font:400 15px/20px "Noto Sans KR", "malgun gothic","Dotum"," Gulim","Arial","Helvetica",sans-serif !important; transition:all 0.3s;}
+a.file_up:hover		{text-decoration:none !important; background:#eef4ff;}
+
+
+/*라인조정,디스플레이*/
+.btn					{border-top:none !important;}
+.brn					{border-right:none !important;}
+.bbn					{border-bottom:none !important;}
+.bbd					{border-bottom:1px solid #ddd;}
+.block					{display:block}
+.inline					{display:inline-block}
+
+/* Form style */
+input[type=text]		{width:100%; height:35px; box-sizing:border-box; padding:0 10px 1px; border:1px solid #ccc; color:#555; font:300 15px/20px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif; }
+input[type=text].gray	{background:#f5f5f5;}
+input[type=text].w50	{width:100%; max-width:50px;}
+input[type=text].w80	{width:100%; max-width:80px;}
+input[type=text].w100	{width:100%; max-width:100px;}
+input[type=text].w150	{width:100%; max-width:150px;}
+input[type=text].w200	{width:100%; max-width:200px;}
+input[type=text].w300	{width:100%; max-width:300px;}
+input[type=text].w500	{width:100%; max-width:500px;}
+input[type=text].file	{width:100%; max-width:300px; color:#555;}
+input[type=text].date	{width:100%; text-align:center; cursor:pointer; padding-right:35px; background:#fff url('/_img/web/comn/cal_bgg.png') no-repeat right 10px top 8px;}
+input[type=text].date1	{width:100%; text-align:center; cursor:pointer; padding-right:35px; background:#fff url('/_img/web/comn/cal_bgg.png') no-repeat right 10px top 8px;}
+input[type=text].date2	{width:100%; text-align:center; cursor:pointer; padding-right:35px; background:#fff url('/_img/web/comn/cal_bgg.png') no-repeat right 10px top 8px;}
+
+input[type=password]		{width:100%; height:35px; box-sizing:border-box; padding:0 5px 1px; border:1px solid #ccc; color:#555; font:300 14px/18px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif; }
+input[type=password].gray	{background:#f5f5f5;}
+input[type=password].w300	{width:100%; max-width:300px;}
+input[type=password].w500	{width:100%; max-width:500px;}
+
+input.checkbox							{position:absolute; overflow:hidden; width:1px !important; height:1px !important; padding:0 !important; margin:-1px; clip:rect(0,0,0,0); border:0;}
+input.checkbox + label					{display:inline-block; position:relative; cursor:pointer; margin-right:15px; padding:4px 0 4px 26px; color:#555; font:300 14px/18px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif; }
+input.checkbox + label:before			{display:block; content:''; position:absolute; left:0; top:4px; width:19px; height:19px; box-sizing:border-box; background:#fff; border:1px solid #ccc;}
+input.checkbox:checked + label:before	{background:#fff url('/_img/web/comn/check_on.png')no-repeat 50% 50%;}
+input.checkbox[disabled] + label		{cursor:default; opacity:.8;}
+input.checkbox[disabled] + label:before	{background: #f5f5f5; border: 1px solid #ccc;}
+input.checkbox + label.checksel					{margin-right:0;}
+input.checkbox + label.checksel + select		{margin:4px 5px 4px 0;}
+input.checkbox + label.checksel:before			{display:block; content:''; position:absolute; left:0; top:10px; width:19px; height:19px; box-sizing:border-box; background:#fff; border:1px solid #ccc;}
+input.checkbox:checked + label.checksel:before	{background:#fff url('/_img/web/comn/check_on.png')no-repeat 50% 50%;}
+
+.ra_base											{position:relative;}
+.ra_base input[type="radio"]						{position:absolute; width:1px !important; height:1px !important; padding: 0; margin:-1px; overflow: hidden; clip:rect(0,0,0,0); border: 0}
+.ra_base input[type="radio"] + label				{display:inline-block; position:relative; cursor:pointer; padding:4px 0 4px 25px; color:#555; font:15px/18px "Noto Sans KR", "malgun gothic","Dotum","Arial","verdana"; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;}
+.ra_base input[type="radio"] + label:before			{content:''; display: inline-block; position:absolute; top:4px; left:0; width:18px; height:18px; border-radius:30px; line-height: 1.5em; text-align: center; vertical-align: middle; border:1px solid #ccc; background:#fff; color:#fff}
+.ra_base input[type="radio"]:checked + label:before	{content:''; background:#fff url('/_img/web/comn/radio_on.png') no-repeat 50% 50% / 10px; border:1px solid #c5c5c5}
+.ra_base input[type="radio"][disabled] + label					{color:#aaa;}
+.ra_base input[type="radio"][disabled] + label:before			{background:#eee;}
+.ra_base input[type="radio"][disabled]:checked + label:before			{background:#eee url('/_img/web/comn/radio_on.png') no-repeat 50% 50% / 10px;}
+
+
+#wrap		{width:100%; /* min-width:1520px; */ background:#fff;}
+.max_width	{width:100%; min-width:1300px; max-width:1300px;}
+
+
+/*header*/
+#header				{overflow:hidden; background:#fff; width:100%;}
+
+div.menu_wrap		{overflow:hidden; position:relative; width:1200px; margin:0 auto; height:60px; box-sizing:border-box;}
+/*div.menu_wrap		{position:relative; width:1200px; margin:0 auto; height:80px; box-sizing:border-box;}*/
+h1.logo				{position:absolute; top:0; left:0;}
+h1.logo a 			{display:inline-block; padding-top:15px;}
+
+/*
+메뉴가 길어져 gnb 줄을 나눠야할때
+ul.menu						{float:right; margin:0px; box-sizing:border-box; padding:0 0px 0 350px; text-align:center; }
+ul.menu	li					{float:left; margin:0; }
+ul.menu	li a				{position:relative; display:block; padding:14px 25px 16px; box-sizing:border-box; color:#222; font:400 17px/30px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+ul.menu	li a:hover			{color:#f98180;}
+ul.menu	li:last-child a		{padding-right:0;}
+ */
+
+ul.menu						{overflow:hidden; height:100%; margin:0px; padding:0 190px 0 320px; text-align:center;}
+ul.menu	li					{display:inline-block; margin:0; }
+ul.menu	li:last-child		{margin:0 10px 0 0;}
+ul.menu	li a				{position:relative; display:block; padding:15px 25px; box-sizing:border-box; color:#222; font:400 18px/30px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+ul.menu	li a:hover			{color:#f98180;}
+ul.menu	li a.on				{color:#f98180; position:relative;}
+ul.menu	li a.on:hover		{color:#ef4f4f}
+ul.menu	li a.on:after		{content:""; display:block; background:#f98180; width:5px; height:5px; border-radius:5px; position:absolute; right:16px; top:17px;}
+
+div.smn_wrap					{width:100%; background:#3e6cc1;}
+div.smn_wrap ul.smn             {width:1200px; margin:0 auto; text-align:center;}
+div.smn_wrap ul.smn li          {display:inline-block;}
+div.smn_wrap ul.smn li a        {display:block; position:relative; margin-left:-5px; padding:0 35px; border-bottom:3px solid #3e6cc1; box-sizing:border-box; cursor:pointer; color:#a1c1e7; font:300 16px/47px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif;}
+div.smn_wrap ul.smn li a.on					{border-bottom:3px solid #ef7e7e; color:#fff; font-weight:400;}
+div.smn_wrap ul.smn li a:after				{position:absolute; content:''; width:1px; height:15px; background:#2f59a3; top:17px; right:0;}
+div.smn_wrap ul.smn li:last-child a:after	{display:none;}
+div.smn_wrap ul.smn li a:hover				{color:#fff;}
+
+/*.gnb						{width:1200px; margin:0 auto; padding:7px 0 0; text-align:right; }*/
+.gnb						{position:absolute; top:18px; right:0;}
+.gnb a						{display:inline-block; text-align:center; font:14px/24px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif; color:#666;}
+.gnb a.join					{position:relative; margin-left:20px; color:#3e6cc0; }
+.gnb a.join:after			{position:absolute; width:1px; height:12px; top:7px; left:-13px; background:#ddd; content:'';}
+.gnb a.join img.account		{display:inline-block; margin:-2px 5px 0 0; vertical-align:middle;}
+.gnb a.my					{position:relative; margin-right:20px; color:#666; }
+.gnb a.my:after				{position:absolute; width:1px; height:12px; top:7px; right:-13px; background:#ddd; content:'';}
+.gnb a.my span				{color:#222;}
+.gnb a.my img.account		{display:inline-block; margin:-2px 5px 0 0; vertical-align:middle;}
+.gnb a.logout				{color:#f98180; font:400 14px/24px "Noto Sans KR","malgun gothic","Dotum","Gulim","Arial","Helvetica",sans-serif; transition:all 0.2s;}
+.gnb a.logout:hover			{color:#ef4f4f}
+.gnb a.logout span.power	{display:inline-block; vertical-align: baseline; padding-right:3px;}
+
+
+/*footer*/
+div#footer	    {overflow:hidden; background:#f8f8f8; padding:40px 10px 60px; border-top:1px solid #e5e5e5;}
+div.f_wrap      {width:1200px; margin:0 auto;}
+div.f_wrap div.copy     {overflow:hidden;}
+div.f_wrap div.copy h1	{margin-right:50px; float:left;}
+div.f_wrap div.copy p.copy_menu {float:left;}
+div.f_wrap div.copy p.copy_menu a {display:inline-block; padding:0 10px; color:#999; font:400 14px/22px "Noto Sans KR","malgun gothic","Dotum"," Gulim","Arial","Helvetica",sans-serif;}
+div.f_wrap div.copy p.copy_menu a span  {font-weight:400; color:#777;}
+div.f_wrap div.copy p.copy_menu a:first-child {padding-left:0px;}
+div.f_wrap p.info	{border-top:1px solid #e8e8e8; margin-top:15px; color:#aaa; padding-top:13px; font:300 14px/24px "Noto Sans KR","malgun gothic","Dotum"," Gulim","Arial","Helvetica",sans-serif;}
+
+/* 에러페이지 */
+.error			{position:relative; width:800px; padding:5% 0 5%;  margin:5% auto 0; background:#f3f3f3; border:1px solid #ddd; text-align:center; word-break:keep-all;}
+.error .tit		{margin:20px 0 0 0; font:500 21px/28px "Noto Sans KR" , "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica" ; color:#333;}
+.error .text	{margin:10px 0 0 0; font:300 18px/20px "Noto Sans KR" , "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica" ; color:#666;}
+.error .logo	{max-width:250px; position:absolute; top:30px; left:40px; }
+.error .img			{width:100%;}
+.error .img img		{max-width:340px; background:url('/_img/web/comn/error.png') no-repeat 50% 50%; background-size:340px auto;}
+
+.view_btn			{text-align:center; margin-top:30px;}
+.view_btn a			{display:inline-block; padding:12px 25px; background:#3e74d6; font:300 17px/24px "Noto Sans KR" , "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#fff !important; -webkit-border-radius:5px; border-radius:5px; -moz-border-radius:5px;}
+.view_btn a:hover	{background:#454545; -moz-transition: all 250ms;  -o-transition: all 250ms;  -webkit-transition: all 250ms;  transition: all 250ms;}
+
+.view_btn a.g_btn01			{display:inline-block; padding:12px 25px; background:#666; font:300 17px/24px "Noto Sans KR" , "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#fff !important; -webkit-border-radius:5px; border-radius:5px; -moz-border-radius:5px;}
+.view_btn a.g_btn01:hover	{background:#454545; -moz-transition: all 250ms;  -o-transition: all 250ms;  -webkit-transition: all 250ms;  transition: all 250ms;}

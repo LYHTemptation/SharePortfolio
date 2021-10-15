@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/* 컬러 및 폰트는 기본적으로 [흑백컬러] 와 [맑은 고딕]을 사용하였습니다. 사용하실때는 소스를 긁어가신 후 변경해주세요 */
+/* HTML소스를 바로 보고싶으시면 기본페이지에서 소스보기 해주세요 */
+/* 소스중 ti-OO 이라는 이름의 클래스명은 폰트아이콘을 사용한것으로 다른사이트로 들고가실때는 빼고 들고가셔야합니다 */
+
+/***** 디자인 기본요소 시작 *****/
+
+/* 레이어 기본폼 */
+div.layer				{display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:100000;}
+div.layer .bg			{position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
+div.layer .pop-layer	{position:absolute; top: 50%; left: 50%; background-color:#fff; z-index: 10;}
+/* 레이어 기본폼 끝 */
+
+/***** 디자인 기본요소 끝 *****/
+
+
+/*테이블 정렬조작*/
+table .l					{text-align:left !important;;}
+table .c					{text-align:center !important;;}
+table .no					{color:#e45555 !important;}
+table .yes					{color:#2350a4 !important;}
+table .no_cont *			{padding:10px !important; text-align:center !important; color:#999 !important; font:13px/18px "Noto Sans KR", "malgun gothic","Dotum"," Gulim","Arial","Helvetica",sans-serif !important;}
+/* 테이블 정렬조작 끝 */
+
+/***** 게시판 기본요소 시작 *****/
+
+/* 등록수&기본검색폼 */
+.db_top				{width:100%; overflow:hidden;}
+.db_top .num		{margin-top:25px; float:left; font:300 16px/17px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#333}
+.db_top .num span	{font-weight:bold; color:#f98180}
+.db_top .search							{float:right;}
+.db_top .search	select					{padding:2px 10px; width:120px; height:46px; border:1px solid #ddd; font:300 15px/17px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#333; background:url('https://www.donor.or.kr/Content/_img/home/comn/f_sel.png')no-repeat right 15px center; display:inline-block; vertical-align:middle; outline:none; -moz-appearance:none; -webkit-appearance:none; appearance:none;}
+.db_top .search	select::-ms-expand		{display:none;}
+.db_top .search	input					{padding:16px 10px; width:200px; height:46px; border:1px solid #ddd; border-right:none; font:300 15px/17px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#333; display:inline-block; vertical-align:middle; outline:none; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.db_top .search	a						{padding:16px 0; width:80px; height:46px; text-align:center; background:#555; font:300 15px/17px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#fff; display:inline-block; vertical-align:middle;}
+.db_top .search	a:hover					{background:#333}
+
+/* 게시글 없을때 */
+.nolist			{width:100%; text-align:center; padding:70px 0 !important; color:#999 !important}
+.nolist:hover	{background:#fff !important}
+
+/* 페이지네이션 */
+.pagenation				{width:100%; text-align:center}
+.pagenation a			{display:inline-block; vertical-align:middle; width:40px; height:40px; padding:11px 0; border:1px solid #ddd; text-align:center; font:300 15px/17px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#888;}
+.pagenation a.on		{font-weight:bold; color:#f98180; border:1px solid #f98180;}
+.pagenation a:hover		{font-weight:bold; color:#f98180; border:1px solid #f98180;}
+.pagenation a.p_n:hover	{font-weight:bold; color:#222; border:1px solid #222;}
+
+/***** 게시판 기본요소 끝 *****/
+
+
+/***** 기본리스트 시작 *****/
+
+table.baselist							{width:100%; border-top:2px solid #aaa; table-layout:fixed;}
+table.baselist thead tr	th				{padding:18px 10px; background:#e8e8e8; border-bottom:1px solid #ddd; vertical-align:middle; font:400 16px/17px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#222}
+table.baselist tbody tr	td				{text-align:center; padding:18px 10px; border-bottom:1px solid #e5e5e5; vertical-align:middle; font:300 16px/17px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#333}
+table.baselist tbody tr	td a.tit		{display:inline-block; vertical-align:middle; max-width:87%; font:400 16px/18px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#333; text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; white-space: nowrap; word-wrap: normal !important;}
+table.baselist tbody tr	td span.new		{display:inline-block; vertical-align:middle; margin-top:1px; margin-left:4px; padding:2px 5px; background:#f98180; font:300 12px/15px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial;color: #fff;}
+table.baselist tbody tr	td span.file	{font-size:17px; vertical-align:middle; margin-left:3px;}
+table.baselist tbody tr	td span.lock	{font-size:17px; vertical-align:middle; margin-right:3px; color:#3e6cc1;}
+table.baselist tbody tr:hover			{background:#fbf1f1}
+table.baselist tbody tr:hover a.tit		{text-decoration:underline}
+table.baselist tbody tr	td.l			{text-align:left;}
+table.baselist tbody tr	td span.rp		{margin-left:3px; vertical-align:baseline; color:#777; font:300 14px/17px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial;}
+
+
+/* 중요공지 */
+table.baselist tbody tr.att				{background:#f8f8f8}
+table.baselist tbody tr.att:hover			{background:#fbf1f1}
+table.baselist tbody tr.att	td span.att	{font-size:19px; vertical-align:middle; color:#f98180;}
+
+/* Q&A 답변상태 */
+/*table.baselist tbody .state01		{color:#3e6acc1;}*/
+table.baselist tbody .state01		{display:inline-block; background:#fff; border:1px solid #aaa; padding:3px 5px 4px; color:#aaa; font:300 14px/15px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial;}
+table.baselist tbody .state02		{display:inline-block; background:#fff; border:1px solid #fb605f; padding:3px 5px 4px; color:#fb605f; font:300 14px/15px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial;}
+table.baselist tbody .state03		{color:#999;}
+
+/* 비밀번호팝업 - 기본폼 미포함(기본폼은 상단에 있습니다) */
+.pass_pop					{position:relative; width:500px; padding:40px 50px; text-align:center;}
+.pass_pop .close			{}
+.pass_pop .close a			{position:absolute; top:2px; right:-40px; z-index:9; font-size:32px; color:#fff;}
+.pass_pop .tit				{font:400 17px/20px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#333;}
+.pass_pop .tit span			{color:#f98180}
+.pass_pop input				{padding:16px 10px; width:300px; height:46px; background:#f1f1f1; font:300 15px/17px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#333; display:inline-block; border:1px solid #f1f1f1; vertical-align:middle; outline:none; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.pass_pop input:focus		{background:#fff; border:1px solid #f98180}
+.pass_pop p.btn				{margin-top:20px;}
+.pass_pop p.btn a			{display:inline-block; width:150px; padding:15px 0 13px 0; }
+.pass_pop p.btn a.btn01		{background:#555; border:1px solid #555; font:300 15px/22px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#fff;}
+.pass_pop p.btn a.btn02		{background:#fff; border:1px solid #555; font:300 15px/22px 'Noto Sans KR',"Malgun Gothic",돋움,굴림,Arial; color:#555;}
+
+.pass_pop span.lock		{display:inline-block; border:3px solid #ddd; border-radius:80px; padding-top:15px; width:80px; height:80px; text-align:center; font-size:40px; color:#ddd;} /*가져가지 않으셔도됩니다.*/
+
+
+/***** 기본리스트 끝 *****/
